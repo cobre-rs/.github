@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions & Discussion
+    url: https://github.com/cobre-rs/cobre/discussions
+    about: Ask questions, share ideas, or discuss Cobre in the Discussions forum.
