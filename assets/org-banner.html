@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 1280px;
+  height: 320px;
+  background: #0F1419;
+  font-family: 'IBM Plex Sans', sans-serif;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Subtle grid */
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(184,115,51,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,115,51,0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+/* Copper horizon glow */
+.glow {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 200px;
+  background: radial-gradient(ellipse at center, rgba(184,115,51,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Faint transmission line silhouettes on right side */
+.transmission {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 500px;
+  pointer-events: none;
+  opacity: 0.04;
+}
+
+.main-layout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-left: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.icon-container {
+  flex-shrink: 0;
+}
+
+.text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wordmark {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 56px;
+  font-weight: 700;
+  color: #E8E6E3;
+  letter-spacing: 6px;
+  line-height: 1;
+}
+
+.accent-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #B87333, #D4956A, transparent);
+  border-radius: 1px;
+}
+
+.tagline {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #8B9298;
+  letter-spacing: 0.8px;
+}
+
+/* Credentials on far right */
+.credentials {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 1;
+}
+
+.credential {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.credential-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 500;
+  color: #B87333;
+}
+
+.credential-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #5A5E63;
+}
+
+/* Corner accents */
+.corner-tl {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 16px;
+  height: 16px;
+  border-top: 1.5px solid rgba(184,115,51,0.15);
+  border-left: 1.5px solid rgba(184,115,51,0.15);
+}
+.corner-br {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 1.5px solid rgba(184,115,51,0.15);
+  border-right: 1.5px solid rgba(184,115,51,0.15);
+}
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <!-- Faint transmission tower silhouettes -->
+  <div class="transmission">
+    <svg width="500" height="320" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
+      <!-- Tower 1 -->
+      <g stroke="#E8E6E3" stroke-width="2" fill="none">
+        <line x1="180" y1="320" x2="195" y2="80"/>
+        <line x1="230" y1="320" x2="215" y2="80"/>
+        <line x1="195" y1="80" x2="205" y2="40"/>
+        <line x1="215" y1="80" x2="205" y2="40"/>
+        <!-- Cross arms -->
+        <line x1="175" y1="90" x2="235" y2="90"/>
+        <line x1="180" y1="130" x2="230" y2="130"/>
+        <line x1="183" y1="170" x2="227" y2="170"/>
+        <!-- Bracing -->
+        <line x1="190" y1="120" x2="220" y2="160"/>
+        <line x1="220" y1="120" x2="190" y2="160"/>
+        <line x1="188" y1="200" x2="222" y2="240"/>
+        <line x1="222" y1="200" x2="188" y2="240"/>
+      </g>
+      <!-- Tower 2 (smaller, further) -->
+      <g stroke="#E8E6E3" stroke-width="1.5" fill="none" transform="translate(140, 60) scale(0.7)">
+        <line x1="180" y1="370" x2="195" y2="100"/>
+        <line x1="230" y1="370" x2="215" y2="100"/>
+        <line x1="195" y1="100" x2="205" y2="60"/>
+        <line x1="215" y1="100" x2="205" y2="60"/>
+        <line x1="175" y1="110" x2="235" y2="110"/>
+        <line x1="180" y1="150" x2="230" y2="150"/>
+        <line x1="190" y1="140" x2="220" y2="180"/>
+        <line x1="220" y1="140" x2="190" y2="180"/>
+      </g>
+      <!-- Power lines connecting -->
+      <path d="M 235 90 Q 320 85 370 108" stroke="#E8E6E3" stroke-width="1" fill="none"/>
+      <path d="M 230 130 Q 310 125 365 145" stroke="#E8E6E3" stroke-width="1" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="main-layout">
+    <!-- Busbar icon -->
+    <div class="icon-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100" height="100">
+        <defs>
+          <linearGradient id="copper" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#D4956A"/>
+            <stop offset="50%" style="stop-color:#B87333"/>
+            <stop offset="100%" style="stop-color:#8B5E3C"/>
+          </linearGradient>
+          <linearGradient id="copperLight" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#E8B88A"/>
+            <stop offset="100%" style="stop-color:#D4956A"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(22, 20)">
+          <rect x="10" y="14" width="62" height="7" rx="3.5" fill="url(#copper)"/>
+          <rect x="10" y="44" width="62" height="7" rx="3.5" fill="url(#copper)"/>
+          <rect x="10" y="74" width="62" height="7" rx="3.5" fill="url(#copper)"/>
+          <rect x="10" y="14" width="7" height="67" rx="3.5" fill="url(#copperLight)"/>
+          <circle cx="72" cy="17.5" r="6.5" fill="url(#copper)"/>
+          <circle cx="72" cy="47.5" r="6.5" fill="url(#copper)"/>
+          <circle cx="72" cy="77.5" r="6.5" fill="url(#copper)"/>
+          <path d="M 80 42 L 88 36 L 84 46 L 92 40" stroke="#F5A623" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="text-group">
+      <div class="wordmark">COBRE</div>
+      <div class="accent-line"></div>
+      <div class="tagline">Open infrastructure for power system computation</div>
+    </div>
+  </div>
+
+  <div class="credentials">
+    <div class="credential">
+      <span class="credential-value">164K</span>
+      <span class="credential-label">lines</span>
+    </div>
+    <div class="credential">
+      <span class="credential-value">2,747</span>
+      <span class="credential-label">tests</span>
+    </div>
+    <div class="credential">
+      <span class="credential-value">Apache-2.0</span>
+      <span class="credential-label">license</span>
+    </div>
+  </div>
+</body>
+</html>

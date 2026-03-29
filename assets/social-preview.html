@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 1280px;
+  height: 640px;
+  background: #0F1419;
+  font-family: 'IBM Plex Sans', sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Subtle grid texture */
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(184,115,51,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,115,51,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Copper glow at top */
+.glow-top {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(184,115,51,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+  margin-top: -20px;
+}
+
+/* Busbar icon - scaled up */
+.icon-container {
+  width: 80px;
+  height: 80px;
+}
+
+.wordmark {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 72px;
+  font-weight: 700;
+  color: #E8E6E3;
+  letter-spacing: 8px;
+  line-height: 1;
+}
+
+/* Copper accent line */
+.accent-line {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #8B5E3C, #B87333, #D4956A, #B87333, #8B5E3C);
+  border-radius: 2px;
+}
+
+.tagline {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: #8B9298;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+/* Credential strip at bottom */
+.credentials {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  z-index: 1;
+}
+
+.credential {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.credential-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 500;
+  color: #B87333;
+}
+
+.credential-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5A5E63;
+}
+
+/* Thin separator line above credentials */
+.separator {
+  position: absolute;
+  bottom: 88px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2D3440, transparent);
+}
+
+/* Subtle spark accents in corners */
+.spark-tl {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 24px;
+  height: 24px;
+  border-top: 2px solid rgba(184,115,51,0.2);
+  border-left: 2px solid rgba(184,115,51,0.2);
+}
+
+.spark-br {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  width: 24px;
+  height: 24px;
+  border-bottom: 2px solid rgba(184,115,51,0.2);
+  border-right: 2px solid rgba(184,115,51,0.2);
+}
+</style>
+</head>
+<body>
+  <div class="glow-top"></div>
+  <div class="spark-tl"></div>
+  <div class="spark-br"></div>
+
+  <div class="main-content">
+    <!-- Inline SVG icon -->
+    <div class="icon-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="80" height="80">
+        <defs>
+          <linearGradient id="copper" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#D4956A"/>
+            <stop offset="50%" style="stop-color:#B87333"/>
+            <stop offset="100%" style="stop-color:#8B5E3C"/>
+          </linearGradient>
+          <linearGradient id="copperLight" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#E8B88A"/>
+            <stop offset="100%" style="stop-color:#D4956A"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(22, 20)">
+          <rect x="10" y="14" width="62" height="7" rx="3.5" fill="url(#copper)"/>
+          <rect x="10" y="44" width="62" height="7" rx="3.5" fill="url(#copper)"/>
+          <rect x="10" y="74" width="62" height="7" rx="3.5" fill="url(#copper)"/>
+          <rect x="10" y="14" width="7" height="67" rx="3.5" fill="url(#copperLight)"/>
+          <circle cx="72" cy="17.5" r="6.5" fill="url(#copper)"/>
+          <circle cx="72" cy="47.5" r="6.5" fill="url(#copper)"/>
+          <circle cx="72" cy="77.5" r="6.5" fill="url(#copper)"/>
+          <path d="M 80 42 L 88 36 L 84 46 L 92 40" stroke="#F5A623" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="wordmark">COBRE</div>
+    
+    <div class="accent-line"></div>
+    
+    <div class="tagline">Open infrastructure for power system computation</div>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="credentials">
+    <div class="credential">
+      <span class="credential-value">164K</span>
+      <span class="credential-label">lines of Rust</span>
+    </div>
+    <div class="credential">
+      <span class="credential-value">2,747</span>
+      <span class="credential-label">tests</span>
+    </div>
+    <div class="credential">
+      <span class="credential-value">Apache-2.0</span>
+      <span class="credential-label">license</span>
+    </div>
+  </div>
+</body>
+</html>
