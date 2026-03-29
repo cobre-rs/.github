@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-  <a href="https://cobre.dev">Website</a> ·
-  <a href="https://docs.cobre.dev">Documentation</a> ·
+  <a href="https://cobre-rs.dev">Website</a> ·
+  <a href="https://docs.cobre-rs.dev">Documentation</a> ·
   <a href="https://pypi.org/project/cobre-python/">PyPI</a>
 </p>
 
@@ -23,6 +23,6 @@ via Apache Arrow.
 - **`cobre-python`** — Python bindings with Arrow zero-copy to polars/pandas
 - **`cobre-bridge`** — convert and compare cases from existing formats
 
-→ [Get started](https://docs.cobre.dev/tutorial/quickstart)
-→ [Coming from an existing solver?](https://docs.cobre.dev/guide/newave-migration)
-→ [Python quickstart](https://docs.cobre.dev/guide/python-quickstart)
+→ [Get started](https://docs.cobre-rs.dev/tutorial/quickstart)
+→ [Coming from an existing solver?](https://docs.cobre-rs.dev/guide/cobre-bridge)
+→ [Python quickstart](https://docs.cobre-rs.dev/guide/python-quickstart)
