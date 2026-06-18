@@ -1,5 +1,4 @@
+# Org-wide issue defaults, inherited by every cobre-rs repo without its own.
+# Kept minimal. Re-add a `contact_links:` entry here (or override per-repo) once
+# GitHub Discussions is enabled on a repo to point people to.
 blank_issues_enabled: true
-contact_links:
-  - name: Questions & Discussion
-    url: https://github.com/cobre-rs/cobre/discussions
-    about: Ask questions, share ideas, or discuss Cobre in the Discussions forum.

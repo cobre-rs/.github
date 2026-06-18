@@ -1,18 +1,14 @@
 ---
 name: Bug Report
-about: Report a bug in a Cobre crate
+about: Report something that isn't working as expected
 title: "[bug] "
 labels: bug
 assignees: ""
 ---
 
-## Crate
-
-Which crate is affected? (e.g., `cobre-core`, `cobre-sddp`)
-
 ## Description
 
-A clear description of the bug.
+A clear description of the bug, and which crate / component it affects.
 
 ## Steps to Reproduce
 
@@ -20,24 +16,16 @@ A clear description of the bug.
 2. ...
 3. ...
 
-## Expected Behavior
+A minimal code snippet or configuration that triggers the bug helps a lot.
 
-What you expected to happen.
+## Expected vs. Actual
 
-## Actual Behavior
-
-What actually happened. Include error messages or logs if available.
-
-## For Numerical Issues
-
-If this is about wrong results or convergence failures:
-
-- Study configuration (TOML or code snippet)
-- System size (number of hydros, thermals, stages, scenarios)
-- Expected values and source (e.g., "NEWAVE produces X for the same case")
+- **Expected:** what you expected to happen.
+- **Actual:** what actually happened — include error messages, logs, or a backtrace.
 
 ## Environment
 
-- Cobre version:
+- Project / crate version (or commit):
 - Rust version (`rustc --version`):
-- OS:
+- OS / platform:
+- Anything else relevant (feature flags, toolchain, external libraries):

@@ -1,34 +1,28 @@
 ## Summary
 
-Brief description of the changes.
-
-## Affected Crate(s)
-
-- [ ] `cobre-core`
-- [ ] `cobre-io`
-- [ ] `cobre-stochastic`
-- [ ] `cobre-solver`
-- [ ] `cobre-sddp`
-- [ ] `cobre-cli`
+What does this change do, and why? Note which crate(s) or component(s) it
+affects, and link any related issues (e.g. `Closes #123`).
 
 ## Type of Change
 
 - [ ] Bug fix
 - [ ] New feature
-- [ ] Performance improvement
-- [ ] Refactoring (no behavior change)
+- [ ] Performance
+- [ ] Refactor (no behavior change)
 - [ ] Documentation
 - [ ] Tests
-- [ ] CI/CD
+- [ ] CI / build
+
+## How Has This Been Verified?
+
+Describe the checks you ran (tests, benchmarks, manual steps) and the platforms
+or configurations they ran on. Call out anything reviewers should look at closely,
+and flag any breaking changes, new dependencies, or follow-ups.
 
 ## Checklist
 
 - [ ] `cargo fmt --all` passes
-- [ ] `cargo clippy --workspace -- -D warnings` passes
-- [ ] `cargo test --workspace` passes
-- [ ] New code has tests where appropriate
-- [ ] Documentation updated if needed
-
-## References
-
-Link to related issues, specs, or papers if applicable.
+- [ ] `cargo clippy --all-targets -- -D warnings` passes
+- [ ] `cargo test` passes
+- [ ] Docs build clean (`cargo doc`) and new public items are documented
+- [ ] Tests added or updated to cover the change

@@ -8,25 +8,22 @@ assignees: ""
 
 ## Use Case
 
-What problem are you trying to solve?
-
-## Affected Crate(s)
-
-Which crate(s) would this affect? (e.g., `cobre-core`, `cobre-sddp`)
+What problem are you trying to solve? Who benefits, and which crate / component
+would this affect?
 
 ## Proposed Solution
 
-Describe the feature you'd like to see.
+Describe the feature or change you'd like to see.
 
 ## Alternatives Considered
 
-Any alternative approaches you've thought about.
+Other approaches you've thought about, and why you'd prefer the proposed one.
 
-## References
+## Additional Context
 
-For algorithmic enhancements, include references to relevant papers or implementations.
+Links, references, or prior art, if applicable.
 
-## Would you implement this?
+## Would you like to implement this?
 
-- [ ] Yes, I'd like to work on this
-- [ ] No, but I'd test/review it
+- [ ] Yes, I'd like to work on it
+- [ ] No, but I'd help test / review
