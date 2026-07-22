@@ -19,7 +19,7 @@ with SDDP-based hydrothermal dispatch. Built in Rust, with Python bindings
 via Apache Arrow.
 
 - **`cobre`** — the core solver: SDDP with FPHA, PAR(p) estimation, CVaR,
-  anticipated thermal dispatch, MPI distribution, and 5,117 tests
+  anticipated thermal dispatch, MPI distribution, and 5,221 tests
 - **`cobre-python`** — Python bindings with Arrow zero-copy to polars/pandas
 - **`cobre-bridge`** — convert and compare cases from existing formats
 
